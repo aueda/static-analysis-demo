@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StyleCopDemo</name>
+    </assembly>
+    <members>
+        <member name="T:StyleCopDemo.SumHelper">
+            <summary>
+            Implements help methods to sum numbers.
+            </summary>
+        </member>
+        <member name="M:StyleCopDemo.SumHelper.AddTwoNumbers(System.Int32,System.Int32)">
+            <summary>
+            Adds two integer numbers.
+            </summary>
+            <param name="leftNumber">The first number.</param>
+            <param name="rightNumber">The second number.</param>
+            <returns>A integer result.</returns>
+        </member>
+    </members>
+</doc>

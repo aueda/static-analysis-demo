@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FxCopDemo</name>
+    </assembly>
+    <members>
+        <member name="T:FxCopDemo.ConvertHelper">
+            <summary>
+            Implements methods to convert numbers to string.
+            </summary>
+        </member>
+        <member name="M:FxCopDemo.ConvertHelper.ConvertToString(System.Int32)">
+            <summary>
+            Converts an integer number to a string.
+            </summary>
+            <param name="value">The integer number.</param>
+            <returns>A string version of the number.</returns>
+        </member>
+    </members>
+</doc>

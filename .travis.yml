@@ -1,0 +1,17 @@
+language: csharp
+dist: trusty
+matrix:
+  include:
+    - dotnet: 2.1.300
+      mono: none
+      env: DOT_NET="Core"
+
+install:
+  - if [ "$DOT_NET" == "Core" ]; then dotnet restore; fi
+
+script:
+  - if [ "$DOT_NET" == "Core" ]; then dotnet test /p:CollectCoverage=true /p:Configuration=Release /p:CopyLocalLockFileAssemblies=true /p:CoverletOutput=../coverage.json FxCopDemo.Tests; fi
+  - if [ "$DOT_NET" == "Core" ]; then dotnet test /p:CollectCoverage=true /p:Configuration=Release /p:CopyLocalLockFileAssemblies=true /p:MergeWith="../coverage.json" /p:CoverletOutputFormat="opencover" /p:CoverletOutput=../coverage.opencover.xml StyleCopDemo.Tests; fi
+  - if [ "$DOT_NET" == "Core" ]; then dotnet tool install --global coveralls.net --version 1.0.0; fi
+  - if [ "$DOT_NET" == "Core" ]; then export PATH="$PATH:/home/travis/.dotnet/tools"; fi
+  - if [ "$DOT_NET" == "Core" ]; then csmacnz.Coveralls --opencover -i ./coverage.opencover.xml --useRelativePaths --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitAuthor "$REPO_COMMIT_AUTHOR" --commitEmail "$REPO_COMMIT_AUTHOR_EMAIL" --commitMessage "$REPO_COMMIT_MESSAGE" --jobId $TRAVIS_JOB_ID  --serviceName travis-ci --serviceNumber fxcopdemo ; fi

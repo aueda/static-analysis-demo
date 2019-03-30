@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleCopDemo", "StyleCopDemo\StyleCopDemo.csproj", "{04231844-F09B-4E28-9C4A-504499A9CF1E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleCopDemo.Tests", "StyleCopDemoTests\StyleCopDemo.Tests.csproj", "{730701EA-CA1E-4C3C-B5ED-BAE60B505867}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleCopDemo.Tests", "StyleCopDemo.Tests\StyleCopDemo.Tests.csproj", "{730701EA-CA1E-4C3C-B5ED-BAE60B505867}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FxCopDemo", "FxCopDemo\FxCopDemo.csproj", "{32863F08-29C1-44C2-9A62-6C4F78833904}"
 EndProject
@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		.travis.yml = .travis.yml
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection

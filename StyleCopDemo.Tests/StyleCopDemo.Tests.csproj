@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FxCopDemo\FxCopDemo.csproj" />
+    <ProjectReference Include="..\StyleCopDemo\StyleCopDemo.csproj" />
   </ItemGroup>
 
 </Project>

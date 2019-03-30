@@ -23,5 +23,32 @@ namespace FxCopDemo.Tests
 
             Assert.Equal(expected, actual);
         }
+
+        /// <summary>
+        /// Returns the correct name for a given number
+        /// if exists.
+        /// </summary>
+        [Fact]
+        public void GetNameReturnsTheNameIfExits()
+        {
+            var actual = ConvertHelper.GetName(1);
+            var expected = "one";
+
+            Assert.Equal(expected, actual);
+        }
+
+        /// <summary>
+        /// Returns an empty for a given number
+        /// if not exists.
+        /// </summary>
+        [Fact]
+        public void GetNameReturnsTheNameIfNotExits()
+        {
+            var actual = ConvertHelper.GetName(15);
+            var expected = string.Empty;
+
+            Assert.NotNull(actual);
+            Assert.Equal(expected, actual);
+        }
     }
 }

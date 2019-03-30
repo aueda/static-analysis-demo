@@ -7,9 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleCopDemo", "StyleCopDem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleCopDemo.Tests", "StyleCopDemoTests\StyleCopDemo.Tests.csproj", "{730701EA-CA1E-4C3C-B5ED-BAE60B505867}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FxCopDemo", "FxCopDemo\FxCopDemo.csproj", "{32863F08-29C1-44C2-9A62-6C4F78833904}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FxCopDemo", "FxCopDemo\FxCopDemo.csproj", "{32863F08-29C1-44C2-9A62-6C4F78833904}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FxCopDemo.Tests", "FxCopDemo.Tests\FxCopDemo.Tests.csproj", "{498A3A6F-8E3D-4657-8558-D00A9D2914D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FxCopDemo.Tests", "FxCopDemo.Tests\FxCopDemo.Tests.csproj", "{498A3A6F-8E3D-4657-8558-D00A9D2914D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2EF423C8-1016-4D07-81D8-716EAC8A2354}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

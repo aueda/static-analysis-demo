@@ -2,6 +2,8 @@
 
 namespace FxCopDemo
 {
+    using System.Collections.Generic;
+
 #if !DISABLE_FIXES
     using System.Globalization;
 #endif
@@ -11,6 +13,36 @@ namespace FxCopDemo
     /// </summary>
     public static class ConvertHelper
     {
+        /// <summary>
+        /// Initializes the <see cref="ConvertHelper"/> class.
+        /// </summary>
+        static ConvertHelper()
+        {
+#if DISABLE_FIXES
+            names = new Dictionary<int, string>
+            {
+                { 1, "one" },
+                { 2, "two" },
+                { 3, "three" }            
+            };
+#endif
+        }
+
+        /// <summary>
+        /// Gets or sets the helper name.
+        /// </summary>
+#if DISABLE_FIXES
+        private static IDictionary<int, string> names;
+#else
+        private static IDictionary<int, string> names =
+            new Dictionary<int, string>
+            {
+                { 1, "one" },
+                { 2, "two" },
+                { 3, "three" }            
+            };
+#endif
+
         /// <summary>
         /// Converts an integer number to a string.
         /// </summary>
@@ -23,6 +55,18 @@ namespace FxCopDemo
 #else
             return value.ToString(CultureInfo.InvariantCulture);
 #endif
+        }
+
+        /// <summary>
+        /// Gets the name of the number.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string GetName(int value)
+        {
+            return names.ContainsKey(value)
+                ? names[value]
+                : string.Empty;
         }
     }
 }

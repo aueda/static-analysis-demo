@@ -29,7 +29,7 @@ namespace FxCopDemo.Tests
         /// if exists.
         /// </summary>
         [Fact]
-        public void GetNameReturnsTheNameIfExits()
+        public void GetNameReturnsTheNameIfExists()
         {
             var actual = ConvertHelper.GetName(1);
             var expected = "one";
@@ -42,7 +42,7 @@ namespace FxCopDemo.Tests
         /// if not exists.
         /// </summary>
         [Fact]
-        public void GetNameReturnsTheNameIfNotExits()
+        public void GetNameReturnsTheNameIfNotExists()
         {
             var actual = ConvertHelper.GetName(15);
             var expected = string.Empty;

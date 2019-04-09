@@ -8,11 +8,10 @@ namespace FxCopDemo.Tests
     public class IEmptyInterfaceTests
     {
         /// <summary>
-        /// Returns the correct name for a given number
-        /// if exists.
+        /// Tests if mock class implements interface.
         /// </summary>
         [Fact]
-        public void GetNameReturnsTheNameIfExits()
+        public void TestsIfObjectImplementsInterface()
         {
             var mockObject = new MockEmptyInterface();
 

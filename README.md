@@ -7,6 +7,10 @@ This is a static analysis demo focused on StyleCop and FxCop for .NET projects.
 
 By default, the solution will build without any warnings.
 
+## Presentation
+
+See the presentation [here](https://tiny.cc/sa-demo).
+
 ## FxCop Demo
 
 Add the following conditional to the project settings to enable warnings:
@@ -21,7 +25,7 @@ Add the following conditional to the project settings to enable warnings:
 
 ## License
 
-This project is licensed under the [MIT License](http://opensource.org/licenses/MIT).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Author
 

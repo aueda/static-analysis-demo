@@ -11,6 +11,9 @@ namespace FxCopDemo
     /// <summary>
     /// Implements methods to convert numbers to string.
     /// </summary>
+    /// <remarks>
+    /// Set DISABLE_FIXES to see FxCop in action.
+    /// </remarks>
     public static class ConvertHelper
     {
         /// <summary>
@@ -18,6 +21,9 @@ namespace FxCopDemo
         /// </summary>
         static ConvertHelper()
         {
+            // Example 1: FxCop will throw a CA1810 warning.
+            // The dictionary names should be defined inline,
+            // instead of being initialized in the constructor.
 #if DISABLE_FIXES
             names = new Dictionary<int, string>
             {
@@ -28,6 +34,8 @@ namespace FxCopDemo
 #endif
         }
 
+        // Example 1 (cont'd): the field names should be
+        // initialized inline.
         /// <summary>
         /// Gets or sets the helper name.
         /// </summary>
@@ -50,6 +58,9 @@ namespace FxCopDemo
         /// <returns>A string version of the number.</returns>
         public static string ConvertToString(int value)
         {
+            // Example 2: FxCop will throw a CA1315 warning.
+            // The ToString should specify the culture to
+            // convert the integer value correctly.
 #if DISABLE_FIXES
             return value.ToString();
 #else
